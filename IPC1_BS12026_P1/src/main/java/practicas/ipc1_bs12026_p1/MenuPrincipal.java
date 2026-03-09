@@ -9,7 +9,7 @@ public class MenuPrincipal {
         sc = new Scanner(System.in);
         
     }
-
+    //para consola
     public void mostrarMenu() {
         int opcion;
 

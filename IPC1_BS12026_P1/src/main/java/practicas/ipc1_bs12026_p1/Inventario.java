@@ -75,6 +75,13 @@ public class Inventario {
 
         return resultados;
     }
+    //reporte de todos los productos 
+    public void reporteProductos() {
+        for (int i = 0; i < Contador; i++) {
+            System.out.println(Productos[i]);
+        }
+    }
+
 
     //eliminar producto
     public boolean eliminarProducto(String codigo) {

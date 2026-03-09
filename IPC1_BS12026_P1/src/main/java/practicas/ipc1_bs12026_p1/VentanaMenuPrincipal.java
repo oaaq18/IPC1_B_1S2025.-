@@ -124,7 +124,8 @@ public class VentanaMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_BuscarPActionPerformed
 
     private void Boton_eliminarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_eliminarProductoActionPerformed
-        // TODO add your handling code here:
+        VentanaEliminarProducto ventanaEliminar = new VentanaEliminarProducto(inventario);
+        ventanaEliminar.setVisible(true);
     }//GEN-LAST:event_Boton_eliminarProductoActionPerformed
 
     private void Boton_VerDAtosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_VerDAtosActionPerformed
@@ -132,7 +133,8 @@ public class VentanaMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_VerDAtosActionPerformed
 
     private void Boton_GenerarRepoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_GenerarRepoActionPerformed
-        // TODO add your handling code here:
+        VentanaGenerarReporte ventanaReporte= new VentanaGenerarReporte(inventario);
+        ventanaReporte.setVisible(true);
     }//GEN-LAST:event_Boton_GenerarRepoActionPerformed
 
     private void Boton_SaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_SaliActionPerformed
