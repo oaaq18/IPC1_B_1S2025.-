@@ -4,6 +4,10 @@
  */
 package practicas.ipc1_bs12026_p1;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author alejandro
@@ -51,38 +55,43 @@ public class VentanaGenerarReporte extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BotonReporteVentas)
-                            .addComponent(jLabel1)))
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(137, 137, 137))
+                            .addComponent(BotonReporteVentas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BotonReporteProductos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(BotonReporteProductos)))
+                        .addGap(140, 140, 140)
+                        .addComponent(BotonRegresar)))
                 .addContainerGap(17, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BotonRegresar)
-                .addGap(107, 107, 107))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(BotonReporteVentas)
-                .addGap(36, 36, 36)
+                .addGap(18, 18, 18)
                 .addComponent(BotonReporteProductos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(BotonRegresar)
-                .addContainerGap())
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonReporteProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonReporteProductosActionPerformed
-      inventario.reporteProductos();
+        if (inventario.getContador()==0) {
+             JOptionPane.showMessageDialog(this, "ERROR: No hay productos ingresados");
+        }else{
+            inventario.reporteProductos();
+            JOptionPane.showMessageDialog(this,"Reporte HTML Generado exitosamente");
+        }
+            
     }//GEN-LAST:event_BotonReporteProductosActionPerformed
 
     private void BotonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegresarActionPerformed

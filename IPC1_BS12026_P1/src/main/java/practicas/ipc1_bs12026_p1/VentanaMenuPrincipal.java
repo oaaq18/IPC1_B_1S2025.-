@@ -14,6 +14,9 @@ public class VentanaMenuPrincipal extends javax.swing.JFrame {
 
     //private Producto producto;
     private Inventario inventario;
+    private double totalVenta;
+    private String Descripcion[];
+    
     public VentanaMenuPrincipal() {
         inventario = new Inventario(5);//capacidad de inventario para almacenar productos
         initComponents();
@@ -110,6 +113,8 @@ public class VentanaMenuPrincipal extends javax.swing.JFrame {
 
     private void Boton_RegistrarVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_RegistrarVActionPerformed
         // TODO add your handling code here:
+        VentanaVenta ventanaVender = new VentanaVenta(inventario);
+        ventanaVender.setVisible(true);
     }//GEN-LAST:event_Boton_RegistrarVActionPerformed
 
     private void Boton_AgregarPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_AgregarPActionPerformed

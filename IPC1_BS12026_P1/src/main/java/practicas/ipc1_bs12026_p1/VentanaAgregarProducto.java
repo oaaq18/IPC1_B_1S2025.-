@@ -174,7 +174,7 @@ public class VentanaAgregarProducto extends javax.swing.JFrame {
         String categoria = (String) Categoria.getSelectedItem();
         int CantidadStock;
         double Precio;
-        //trycatch para 
+        //trycatch para convertir texto a double
         try {
             Precio = Double.parseDouble(precioTexto);       //convertir texto a double
             CantidadStock = Integer.parseInt(cantidadTexto);//convertir texto a int
